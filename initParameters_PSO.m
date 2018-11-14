@@ -55,7 +55,7 @@ function [Parameters, Parameter_delta ] = initParameters_PSO(No_of_Members, No_o
 %% JPHMR - Is the idea to minimize the spread to infer that the distributions are significantly diffirent    
 function S = Spread(samples)
     % Function that measures the "spread" of the given samples
-    n = length(samples);
+    [n, x] = size(samples);
     S = 0;
     for k = 1:n
         for j=k+1:n
